@@ -1,0 +1,13 @@
+# welcome to : blog.aqours.ga
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /categories/
+Allow: /about/
+
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendors/
+Disallow: /lib/
+Sitemap: https://blog.aqours.ga/sitemap.xml
