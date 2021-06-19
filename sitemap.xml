@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.aqours.ga/2021/06/19/%E7%B7%8A%E6%80%A5%E4%BA%8B%E6%85%8B/</loc>
+    
+    <lastmod>2021-06-19</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.aqours.ga/2020/08/27/%E4%B9%9D%E5%91%A8%E5%B9%B4FEST%E7%8E%B0%E5%9C%B0%E8%AE%B0%E5%BD%95/</loc>
     
     <lastmod>2021-06-12</lastmod>
@@ -165,7 +172,7 @@
 
   <url>
     <loc>https://blog.aqours.ga/</loc>
-    <lastmod>2021-06-17</lastmod>
+    <lastmod>2021-06-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -173,70 +180,70 @@
   
   <url>
     <loc>https://blog.aqours.ga/tags/%E4%BD%9C%E5%93%81/</loc>
-    <lastmod>2021-06-17</lastmod>
+    <lastmod>2021-06-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.aqours.ga/tags/FEST/</loc>
-    <lastmod>2021-06-17</lastmod>
+    <lastmod>2021-06-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.aqours.ga/tags/%E9%95%BF%E7%AF%87/</loc>
-    <lastmod>2021-06-17</lastmod>
+    <lastmod>2021-06-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.aqours.ga/tags/%E6%B8%B8%E8%AE%B0/</loc>
-    <lastmod>2021-06-17</lastmod>
+    <lastmod>2021-06-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.aqours.ga/tags/%E6%8B%96%E6%9B%B4/</loc>
-    <lastmod>2021-06-17</lastmod>
+    <lastmod>2021-06-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.aqours.ga/tags/%E6%84%9F%E6%83%B3/</loc>
-    <lastmod>2021-06-17</lastmod>
+    <lastmod>2021-06-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.aqours.ga/tags/%E8%BD%AC%E8%BD%BD/</loc>
-    <lastmod>2021-06-17</lastmod>
+    <lastmod>2021-06-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.aqours.ga/tags/%E9%87%87%E8%AE%BF/</loc>
-    <lastmod>2021-06-17</lastmod>
+    <lastmod>2021-06-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.aqours.ga/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/</loc>
-    <lastmod>2021-06-17</lastmod>
+    <lastmod>2021-06-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.aqours.ga/tags/%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2021-06-17</lastmod>
+    <lastmod>2021-06-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
