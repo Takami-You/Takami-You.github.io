@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    Windows Server二三事 |  咻咔咻咔咻的blog
+    赛马娘手游连接的若干想法 |  咻咔咻咔咻的blog
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -46,7 +46,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-Windows Server二三事"
+  id="post-赛马娘手游连接若干想法"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -57,22 +57,22 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Windows Server二三事
+  赛马娘手游连接的若干想法
 </h1>
  
 
     </header>
      
     <div class="article-meta">
-      <a href="/2021/06/17/Windows%20Server%E4%BA%8C%E4%B8%89%E4%BA%8B/" class="article-date">
-  <time datetime="2021-06-17T04:08:41.000Z" itemprop="datePublished">2021-06-17</time>
+      <a href="/2021/06/29/%E8%B5%9B%E9%A9%AC%E5%A8%98%E6%89%8B%E6%B8%B8%E8%BF%9E%E6%8E%A5%E8%8B%A5%E5%B9%B2%E6%83%B3%E6%B3%95/" class="article-date">
+  <time datetime="2021-06-29T10:16:57.000Z" itemprop="datePublished">2021-06-29</time>
 </a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">2.1k</span>
+            <span class="post-count">600</span>
         </span>
     </span>
 
@@ -81,85 +81,27 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">7 分钟</span>
+            <span class="post-count">2 分钟</span>
         </span>
     </span>
 </div>
  
     </div>
       
-    <div class="tocbot"></div>
-
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>开坑，写点这段时间用Windows Server系统的体会和经验，算是第一个技术类型blog了吧，可喜可贺（</p>
-<p>大概会长期更新，大概~</p>
+  <p>对赛马娘手游真的是五味杂陈，一方面真的好玩，但是另一方面，打一开始，它的服务器连接方式就让我迷惑，这边就简单说一下自己对cy服务器连接策略的想法。</p>
 <a id="more"></a>
 
-<h1 id="Azure"><a href="#Azure" class="headerlink" title="Azure"></a>Azure</h1><p>在说Windows系统之前先谈谈这台服务器和云服务商微软云。</p>
-<p>目前来说，较大的全球性的几个云服务器商不外乎AWS GCP Azure，可能再加上Oracle IBM，当然天朝的就不多说了。</p>
-<p>众所周知，大型云服务商都会有免费的虚拟机套餐，在这之前我已经在20年八月嫖了AWS和GCP的免费服务器，现在已经是21年6月了，快到期了，而7月星团动画首播，肯定要再搞几个霓虹的服务器保险，毕竟NTT的线路晚上实在是不敢恭维，正好还能试试上点加速，比如最近了解的<a target="_blank" rel="noopener" href="https://github.com/yeyingorg/bbr2.sh">BBR2</a>，据说上了之后NTT变软银（当然这是另外的事情了）。</p>
-<p>了解了一下Azure的免费套餐，不出意外，非常不友好，刚开始完全看不懂它免费的是什么，后来看了教程才知道，是B1s虚拟机*2，Linux和Windows各一（不愧是微软，为了推广Windows Server不遗余力），而且还有有效期一个月的200USD额度。</p>
-<p>但是别急，这是最基本的，再次众所周知，大厂的免费套餐坑非常之多，下面就是一个挺深的坑，B1s创建默认的是32GB的存储，但是要是细看免费内容，它写的是64GB存储*2，所以创建完成立即停止实例，存储换成64GB，这样才能变成免费的。</p>
-<p>还没完，开免费套餐要先升级成即用即付订阅（Azure分订阅），所以现在就有三个订阅，即，即用即付、Pay-As-You-Go、Azure订阅1（默认），这三个订阅<strong>只有在Azure订阅1</strong>里面创建虚拟机是可以使用免费套餐的（其他套餐能不能使用200USD暂未知，我没试）</p>
-<p>这里说一个小Tips（可能），绑定信用卡（借记卡可用，中行跨境通亲测）后可以不急着买美元验证，一样可以开服务器，而且现在开服务器不会使用额度不会使用免费套餐时间，只不过这期间Azure会一直给你发邮件，使用最好还是不要拖太久。</p>
-<p>BTW，升级订阅之前（即信用卡验证成功之前），默认的Azure订阅1的名字是Free Trial。</p>
-<br />
-
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/2vuUg0"><img src="https://z3.ax1x.com/2021/06/17/2vuUg0.md.png" alt="2vuUg0.md.png"></a></p>
-<br />
-
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/2vKErT"><img src="https://z3.ax1x.com/2021/06/17/2vKErT.md.png" alt="2vKErT.md.png"></a></p>
-<br />
-可以看到B1s使用时间才一天多一点，但是实际上这台服务器我已经开了几天了。
-不过这个方法没有长期测试过，不知道用信用卡会不会出账单，慎用。
-
-<p>Azure是没有Billing这个东西的，相关的功能都在“订阅”里，包括免费套餐的使用情况，但是似乎没有流量使用数据，这点和AWS不一样，但是可以自行装个探针，统计一下流量。这里推荐<a target="_blank" rel="noopener" href="https://www.cokemine.com/serverstatus-hotaru.html">可乐探针</a>，算是比较有名的了，GitHub也Windows版，安装比Linux稍微麻烦一点，但是也还好。记得开启每月清零。<br><br /></p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/2zpMvj"><img src="https://z3.ax1x.com/2021/06/17/2zpMvj.md.png" alt="2zpMvj.md.png"></a></p>
-<br />
-一开始遵循免费套餐来了个B1s的Windows Server服务器，安装意外的快，不过停止实例的速度真心不快，我等了得有五分钟左右。
-
-<p>B1s的性能就是最入门的那一批，1C1G，默认32GB存储，每月15GB互联网流出流量，入向流量免费，暂时不知道RDF消耗不消耗流量。</p>
-<p>路由追踪的结果是山东青岛联通-广州-香港-东京-波特兰-圣克拉拉，走的AS4837，也就是年初炒的很厉害的CU VIP，电信方面就是163，跳的次数和联通一样，跳的比较厉害，但是意外的延迟只有182ms左右。流量不多不太敢测速，根据RDF使用情况来说，速度应该不会很差，虚拟机内YouTube 1080 60看是没什么问题的。</p>
-<p>换好，启动RDF（这是我为数不多的使用RDF的时候，上一次用还是因为要玩黄油），RDF，即远程连接，建议稍微了解一下，也只有Win10专业版才有的功能，一般的家庭版是没有的。</p>
-<p>安装的镜像是[smalldisk]Windows Server,version 20H2 with Containers -Gen2，注意免费的套餐一定要使用smalldisk，不然系统也是要收费的，后面的版本倒是无所谓(我也没搞懂这么多版本除了发布时间不同之外有什么区别)。</p>
-<p>其实更多的注意事项Google一下一堆，我只说了几个我比较在意的。</p>
-<h1 id="Windows-Server"><a href="#Windows-Server" class="headerlink" title="Windows Server"></a>Windows Server</h1><p>不知道是不是因为是smalldisk，进去之后是没有GUI的，只有一个PowerShell，但是据说可以通过命令行安装GUI</p>
-<blockquote>
-<p>Install-WindowsFeature Server-Gui-Shell,Server-Gui-Mgmt-Infra</p>
-</blockquote>
-<p>不过我没试过，1GB内存可能上GUI有点吃力。</p>
-<p>后来这台因为发现开在即用即付订阅里去了（会扣费），然后就删了。</p>
-<p>后来就用那200USD的赠金开了一台Windows Server服务器，因为觉得ubuntu等GNU/Linux系统有GUI也没啥意思，还不如单纯的putty来的有意思，所以干脆就又开了个win的，毕竟没怎么用过win的服务器系统，正好熟悉一下。</p>
-<p>因为有了赠金，所以这次的配置比较高，B2s，2C4G，128GB存储，当然可能不带免费的出站流量了，不过赠金多，不慌。</p>
-<p>下面就说点服务器系统和桌面版不太一样的地方。</p>
-<h3 id="浏览器安全访问"><a href="#浏览器安全访问" class="headerlink" title="浏览器安全访问"></a>浏览器安全访问</h3><p>即使是Windows Server 2019，也没有内置EDGE浏览器而是只放了个IE，打开的时候就会提示这是针对服务器使用了加强安全性的IE，其实可能和正常使用的IE没什么两样，但是重在各项安全设置都是拉到最高的，刚开始不知道，没有调试，打开一个网页要弹好几个弹窗，下载一个面板都下载不下来，想下载Chrome结果好几遍都没开始下载，后来才发现可能是安全设置太高了，进去Internet设置一看，确实是这样，而且没法下拉安全值，只能一个个手动调，手动开启功能。<br><br /></p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/2zmGZD"><img src="https://z3.ax1x.com/2021/06/17/2zmGZD.md.png" alt="2zmGZD.md.png"></a></p>
-<br />
-
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/2zmWzq"><img src="https://z3.ax1x.com/2021/06/17/2zmWzq.md.png" alt="2zmWzq.md.png"></a></p>
-<br />
-不过这种麻烦在成功安装Chrome之后就不存在了哈哈哈
-
-<h3 id="cmd-PowerShell命令不一定通用"><a href="#cmd-PowerShell命令不一定通用" class="headerlink" title="cmd/PowerShell命令不一定通用"></a>cmd/PowerShell命令不一定通用</h3><p>因为学习的需要，安装了一个面板用来运行PHP网页，结果数据库出了点问题，服务里面有一个mysql了，要删掉这一个，用cmd命令sc delete mysql，得到下面的结果<br><br /></p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/2znV6P"><img src="https://z3.ax1x.com/2021/06/17/2znV6P.png" alt="2znV6P.png"></a></p>
-<br />
-
-<p>但是也没放弃，继续通过各种不通的写法测试，但是无一运行。<br><br /></p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/2znG60"><img src="https://z3.ax1x.com/2021/06/17/2znG60.md.png" alt="2znG60.md.png"></a></p>
-<br />
-后来发现可能是不通用的，试了一下tsakkill -F -PID，根据PID强制结束程序的，结果发现也不能识别命令。
-
-<p>刚刚又试了一下，ipconfig也没法运行，现在怀疑是不是cmd压根没用，原因暂未知，网上也没大有相关信息。</p>
-<p>但是奇怪的是之前安装探针的时候在PowerShell里面运行过几个命令，记得应该是可以的啊……</p>
-<h3 id="敏感时期最后的希望"><a href="#敏感时期最后的希望" class="headerlink" title="敏感时期最后的希望"></a>敏感时期最后的希望</h3><p>现在是2021年6月29日，众所周知，今年7.1是百年党庆，所以GFW急剧加高，今早我的一台台湾GCP已经被墙了，还好不是主力而且也快过期了，但是我还是吓得立即把除了一台快过期的AWS东京EC2和一台可以随时换IP的AWS Lightsail之外的服务器全部关闭了v2ray服务。</p>
-<p>不过GFW也是很精明的，GCP那台我没有失联，探针能正常使用，ssh也能正常登录，应该只是封了端口（因为探针端口也不是那么常规），换端口可以，但是还是怕给我直接封IP。</p>
-<p>使用这时候Windows服务器的好处就体现了，尤其是高性能的，像我这台2C4G，开个远程连接，在服务器上看油管，美滋滋（</p>
-<p>不过也相应的验证了Windows远程连接的速度确实可以，UDP连接良好的情况下YouTube 1080 60 基本可以做到无卡顿，虽然看起来帧率并没有60，但这就已经足够了。</p>
+<p>游戏下载倒是很容易，不管是Google Play Store还是国内的qoo，都很好搞。</p>
+<p>但是第一次近游戏就没那么容易了，虽然之前已经知道cy锁日本IP了，但是还是很奇怪，原生日本IP的梯子也完全登录不了，可是加速器就能行。</p>
+<p>按道理，加速器和梯子差不多，只不过加速器一定走IPLC专线，速度延迟快一点，还不会违法，本质实际差不多，但是加速器能连cy而梯子不能这就非常奇怪，除非cy把日本各大vps商IP全封锁但是全封锁了一方面可能影响本土，再一个那样加速器也会失效，不知道cy会不会主动探测客户端IP，那样的话我的梯子的伪装都是国内的http，也有可能会失效，但是按理来说没必要做到这种份上，这样应该很消耗服务器资源，毕竟一个请求还要回去探测一次。</p>
+<p>还有一个问题，就是现在我手机连赛马娘用自己的梯子没问题的，但是电脑，DMM更新赛马娘一次之后自己的梯子就连不，上了(手机 上是赛马娘应用内更新)，略怀疑cy把游戏和账号分成了两部分存储，首次登录都要通过账号那边，然后才能访问游戏数据，但是账号那边安全组规则非常严格，很多IP段全封，所以梯子用的比较多的那些IP段失效，而游戏数据那边就没这么严格了，PC端通过DMM更新个人觉得≈Google Play Store更新，要重新登录账号，所以导致PC现在处于无法登录状态，然后也解释了为什么手机端首次登录也必须要加速器才能连上(以及申请引继也必须要加速器才能设置)</p>
+<p>最近是100周年敏感时期，关于换日本http伪装的事等过去再说，到时候会怎么样我会再补充。</p>
  
       <!-- reward -->
       
@@ -222,7 +164,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.aqours.ga/2021/06/17/Windows%20Server%E4%BA%8C%E4%B8%89%E4%BA%8B/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://blog.aqours.ga/2021/06/29/%E8%B5%9B%E9%A9%AC%E5%A8%98%E6%89%8B%E6%B8%B8%E8%BF%9E%E6%8E%A5%E8%8B%A5%E5%B9%B2%E6%83%B3%E6%B3%95/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -233,19 +175,10 @@
    
   <nav class="article-nav">
     
+    
       <a href="/2021/06/19/%E7%B7%8A%E6%80%A5%E4%BA%8B%E6%85%8B/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            緊急事態
-          
-        </div>
-      </a>
-    
-    
-      <a href="/2021/06/12/%E6%B5%8B%E8%AF%95/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">测试功能用的</div>
+        <div class="article-nav-title">緊急事態</div>
       </a>
     
   </nav>
