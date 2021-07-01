@@ -125,7 +125,7 @@
 
 <p>B1s的性能就是最入门的那一批，1C1G，默认32GB存储，每月15GB互联网流出流量，入向流量免费，暂时不知道RDF消耗不消耗流量。</p>
 <p>路由追踪的结果是山东青岛联通-广州-香港-东京-波特兰-圣克拉拉，走的AS4837，也就是年初炒的很厉害的CU VIP，电信方面就是163，跳的次数和联通一样，跳的比较厉害，但是意外的延迟只有182ms左右。流量不多不太敢测速，根据RDF使用情况来说，速度应该不会很差，虚拟机内YouTube 1080 60看是没什么问题的。</p>
-<p>换好，启动RDF（这是我为数不多的使用RDF的时候，上一次用还是因为要玩黄油），RDF，即远程连接，建议稍微了解一下，也只有Win10专业版才有的功能，一般的家庭版是没有的。</p>
+<p>换好，启动远程连接（这是我为数不多的使用自带远程的时候，上一次用还是因为要玩黄油），建议稍微了解一下远程连接，毕竟Windows下shell没有Linux那么好用，很多时候还是要依赖GUI的。这也是只有专业版以上的桌面系统才有的功能，一般的家庭版是没有的。</p>
 <p>安装的镜像是[smalldisk]Windows Server,version 20H2 with Containers -Gen2，注意免费的套餐一定要使用smalldisk，不然系统也是要收费的，后面的版本倒是无所谓(我也没搞懂这么多版本除了发布时间不同之外有什么区别)。</p>
 <p>其实更多的注意事项Google一下一堆，我只说了几个我比较在意的。</p>
 <h1 id="Windows-Server"><a href="#Windows-Server" class="headerlink" title="Windows Server"></a>Windows Server</h1><p>不知道是不是因为是smalldisk，进去之后是没有GUI的，只有一个PowerShell，但是据说可以通过命令行安装GUI</p>
@@ -153,6 +153,7 @@
 <p>你也可以在<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows-server/get-started-19/editions-comparison-19">这里</a>看到Datacenter和Standard更详细的区别。</p>
 <p>而smalldisk则是因为免费套餐的存在，磁盘只能向上扩，不能缩小，所以免费套餐的Windows的只能选择smalldisk系列的镜像（这可能也就是smalldisk存在的唯一意义）</p>
 <p>细心的话应该可以看出来还有诸如2004 20H2这种命名类似Win10的系统版本，和Win10一样的是，它不像2019以及之前的版本是买断策略，这种版本是不断迭代的，类似于server版的Win10，<br>你可以在<a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows-server/get-started/whats-new-in-windows-server-2004">这里</a>和<a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows-server/get-started/windows-server-release-info">这里</a>了解更多关于这种版本的信息。</p>
+<p>至于早期版本的R1 R2，我没有去搜过，但是我的理解是类似于Win7及之前时代的SP1 SP2的东西，补丁包集合然后新发一个版本。</p>
 <p>好像最近2022版要出来了，不过跟大部分人也没啥关系就是喽。</p>
 <h3 id="浏览器安全访问"><a href="#浏览器安全访问" class="headerlink" title="浏览器安全访问"></a>浏览器安全访问</h3><p>即使是Windows Server 2019，也没有内置EDGE浏览器而是只放了个IE，打开的时候就会提示这是针对服务器使用了加强安全性的IE，其实可能和正常使用的IE没什么两样，但是重在各项安全设置都是拉到最高的，刚开始不知道，没有调试，打开一个网页要弹好几个弹窗，下载一个面板都下载不下来，想下载Chrome结果好几遍都没开始下载，后来才发现可能是安全设置太高了，进去Internet设置一看，确实是这样，而且没法下拉安全值，只能一个个手动调，手动开启功能。<br><br /></p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/2zmGZD"><img src="https://z3.ax1x.com/2021/06/17/2zmGZD.md.png" alt="2zmGZD.md.png"></a></p>
