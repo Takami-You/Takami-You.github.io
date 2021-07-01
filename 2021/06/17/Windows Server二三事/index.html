@@ -72,7 +72,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">2.1k</span>
+            <span class="post-count">2.5k</span>
         </span>
     </span>
 
@@ -81,7 +81,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">7 分钟</span>
+            <span class="post-count">8 分钟</span>
         </span>
     </span>
 </div>
@@ -136,7 +136,24 @@
 <p>后来这台因为发现开在即用即付订阅里去了（会扣费），然后就删了。</p>
 <p>后来就用那200USD的赠金开了一台Windows Server服务器，因为觉得ubuntu等GNU/Linux系统有GUI也没啥意思，还不如单纯的putty来的有意思，所以干脆就又开了个win的，毕竟没怎么用过win的服务器系统，正好熟悉一下。</p>
 <p>因为有了赠金，所以这次的配置比较高，B2s，2C4G，128GB存储，当然可能不带免费的出站流量了，不过赠金多，不慌。</p>
-<p>下面就说点服务器系统和桌面版不太一样的地方。</p>
+<h3 id="Windows-Server各版本区别"><a href="#Windows-Server各版本区别" class="headerlink" title="Windows Server各版本区别"></a>Windows Server各版本区别</h3><p>Azure不愧是微软的云服务，Windows系统里面各版本极其全面，甚至看的眼花缭乱。</p>
+<br />
+
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Rshd4U"><img src="https://z3.ax1x.com/2021/07/01/Rshd4U.png" alt="Rshd4U.png"></a></p>
+<br />
+
+<p>很多版本其实我也没搞明白，因为实在是太杂了，就简单说几个大一点的。</p>
+<p>首先就是Windows Server 2008 2012 2012以及2019这样的版本区别，你可以在<a target="_blank" rel="noopener" href="https://download.microsoft.com/download/B/F/0/BF00B689-94F5-4E12-8159-7804D0C27C09/Windows_Server_2019_Feature_Comparison_Guide_EN_US.pdf">这里</a>查看到微软官方的文档（English），里面有详细的功能差异，不过一般来说无脑2019就好了，2008这种都已经停止支持了。</p>
+<p>然后就是所谓的Datacenter和普通版，有时还有一个精华版，功能复杂度是数据中心＞精华版＞普通版，下图很好的说明了各个版本的适用环境。</p>
+<br />
+
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/RshO58"><img src="https://z3.ax1x.com/2021/07/01/RshO58.md.png" alt="RshO58.md.png"></a></p>
+<br />
+
+<p>你也可以在<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows-server/get-started-19/editions-comparison-19">这里</a>看到Datacenter和Standard更详细的区别。</p>
+<p>而smalldisk则是因为免费套餐的存在，磁盘只能向上扩，不能缩小，所以免费套餐的Windows的只能选择smalldisk系列的镜像（这可能也就是smalldisk存在的唯一意义）</p>
+<p>细心的话应该可以看出来还有诸如2004 20H2这种命名类似Win10的系统版本，和Win10一样的是，它不像2019以及之前的版本是买断策略，这种版本是不断迭代的，类似于server版的Win10，<br>你可以在<a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows-server/get-started/whats-new-in-windows-server-2004">这里</a>和<a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows-server/get-started/windows-server-release-info">这里</a>了解更多关于这种版本的信息。</p>
+<p>好像最近2022版要出来了，不过跟大部分人也没啥关系就是喽。</p>
 <h3 id="浏览器安全访问"><a href="#浏览器安全访问" class="headerlink" title="浏览器安全访问"></a>浏览器安全访问</h3><p>即使是Windows Server 2019，也没有内置EDGE浏览器而是只放了个IE，打开的时候就会提示这是针对服务器使用了加强安全性的IE，其实可能和正常使用的IE没什么两样，但是重在各项安全设置都是拉到最高的，刚开始不知道，没有调试，打开一个网页要弹好几个弹窗，下载一个面板都下载不下来，想下载Chrome结果好几遍都没开始下载，后来才发现可能是安全设置太高了，进去Internet设置一看，确实是这样，而且没法下拉安全值，只能一个个手动调，手动开启功能。<br><br /></p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/2zmGZD"><img src="https://z3.ax1x.com/2021/06/17/2zmGZD.md.png" alt="2zmGZD.md.png"></a></p>
 <br />
